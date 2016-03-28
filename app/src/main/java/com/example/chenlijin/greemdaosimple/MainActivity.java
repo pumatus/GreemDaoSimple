@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements NoteListAdapter.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        //创建表
+        //创数据库
         DaoMaster.DevOpenHelper db = new DaoMaster.DevOpenHelper(this, "notes-db", null);
         //获取daomaster
         mDaoMaster = new DaoMaster(db.getWritableDatabase());
